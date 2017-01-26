@@ -24,6 +24,16 @@ class DrawerContent extends Component {
     this.context.drawer.toggle()
   }
 
+   handleBuscaEntidade = () => {
+    this.toggleDrawer();
+    NavigationActions.buscaEntidade();
+  }
+
+  handleMapaBar = () => {
+    this.toggleDrawer();
+    NavigationActions.mapaBar();
+  }
+
   
 
 
@@ -31,8 +41,8 @@ class DrawerContent extends Component {
     return (
       <ScrollView style={styles.container}>
         <Image source={Images.logoMenuLateral} style={styles.logo} />
-        <DrawerButton text={I18n.t('menuLateralMapa')} onPress={this.handlePrazosProcedimento} />
-        <DrawerButton text={I18n.t('menuLateralConsulta')} onPress={this.handleReputacao} />
+        <DrawerButton text={I18n.t('menuLateralMapa')} onPress={this.handleMapaBar} />
+        <DrawerButton text={I18n.t('menuLateralConsulta')} onPress={this.handleBuscaEntidade} />
 
       </ScrollView>
     )

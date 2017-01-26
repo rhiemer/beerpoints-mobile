@@ -29,8 +29,14 @@ export const INITIAL_STATE = Immutable({
 export const request = (state: Object) => state.merge({ fetching: true })
 
 // we've successfully logged in
-export const success = (state: Object, { username }: Object) =>
-  state.merge({ fetching: false, error: null, username })
+//export const success = (state: Object, { username }: Object) =>
+ // state.merge({ fetching: false, error: null, username })
+
+
+export const success = (state: Object, { username }: Object) => {
+  window.alert("username"+username);  
+  return state.merge({ fetching: false, error: null, username })
+}
 
 // we've had a problem logging in
 export const failure = (state: Object, { error }: Object) =>

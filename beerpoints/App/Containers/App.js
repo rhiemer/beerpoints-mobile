@@ -7,6 +7,8 @@ import RootContainer from './RootContainer'
 import createStore from '../Redux'
 import applyConfigSettings from '../Config'
 
+var SplashScreen = require('@remobile/react-native-splashscreen');
+
 // Apply config overrides
 applyConfigSettings()
 // create our store
@@ -22,6 +24,10 @@ const store = createStore()
  * We separate like this to play nice with React Native's hot reloading.
  */
 class App extends Component {
+  
+  componentDidMount() {
+        SplashScreen.hide();
+  }
   render () {
     return (
       <Provider store={store}>

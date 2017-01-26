@@ -22,5 +22,25 @@
    "themeSettings": "Theme Settings",
    "deviceDetails": "Device Details",
    "noItems": "No Items",
-   "search": "Search"
+   "search": "Search",
+    "tituloAplicacao": "BeerPoints",
+    "menuLateralMapa": "Mapas",
+    "menuLateralConsulta": "Consultas",
+    "tituloBuscaCerveja":"Cervejas",
+    "textoPesquisaBuscaCerveja":"Digite aqui o nome da cerveja",
+    "buscaCervejaNaoEncontrada":"Cerveja não encontrada",
+    "buscaEntidadesTabLabelPrincipal":"Consulta",
+    "tituloCervejaDetalhada":"Cerveja",
+    "detalhesEntidadeDetalhada":"Cerveja",
+    "idEntidade":"Código",
+    "mapaBar":"Localização Bares",
+    "textoPesquisaBuscaBar":"Digite aqui o nome do bar",
+    "buscaBarNaoEncontrado":"Bar não encontrado",
+    "tituloBuscaBar":"Bar",
+    "tituloBarDetalhado":"Bar",
+    "tituloBuscaEntidade":"Pesquisa",
+    "tituloMapaBar":"Mapa"
+
+
+
 }
