@@ -43,7 +43,9 @@ class BuscaCerveja extends React.Component {
     }
   }
 
- 
+ detalhar(row) {
+    NavigationActions.cervejaDetalhada(row)
+  }
 
   render () {
     const { performSearch, searchTerm } = this.props;
@@ -53,7 +55,7 @@ class BuscaCerveja extends React.Component {
                              labelHeader={I18n.t('textoPesquisaBuscaCerveja')}
                              dataSource={this.state.dataSource}                             
                              onChangeText={(text) => performSearch(text)}
-                             onPressRow={(row) => NavigationActions.cervejaDetalhada(row)}/>
+                             onPressRow={(row) => this.detalhar(row)}/>
     )
   }
 

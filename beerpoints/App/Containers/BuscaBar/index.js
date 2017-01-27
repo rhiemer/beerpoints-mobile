@@ -31,7 +31,9 @@ class BuscaBar extends React.Component {
     }
   }
 
-  
+  detalhar(row) {
+    NavigationActions.barDetalhado(row);
+  }
 
   componentWillReceiveProps (newProps) {
     if (newProps.results) {
@@ -50,11 +52,13 @@ class BuscaBar extends React.Component {
                              labelHeader={I18n.t('textoPesquisaBuscaBar')}
                              dataSource={this.state.dataSource}                             
                              onChangeText={(text) => performSearch(text)}
-                             onPressRow={(row) => NavigationActions.barDetalhado(row)}/>
+                             onPressRow={(row) => this.detalhar(row)}/>
     )
   }
 
 }
+
+
 
 const mapStateToProps = (state) => {
   return {

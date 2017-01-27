@@ -24,8 +24,8 @@ type ListViewBuscaEntidadeProps = {
   dataSource:Object,
   labelHeader: String,
   labelBuscaNaoEncontrada:String,
-  onChangeText: () => void,
-  onPressRow: () => void,
+  onPressRow: (row:Object) => void,
+  onChangeText: () => void,  
   styles?: Object
 }
 
@@ -39,8 +39,10 @@ export default class ListViewBuscaEntidade extends React.Component {
   }
 
   _renderRow = (searchTerm) => (row) => {
+
+  
   return (
-    <RowListViewEntidade onPress={this.props.onPressRow} entidade={row} highlight={searchTerm} />
+    <RowListViewEntidade onPress={() => this.props.onPressRow(row)} entidade={row} highlight={searchTerm} />
   )
 }
 
