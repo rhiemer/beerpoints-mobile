@@ -100,7 +100,7 @@ class MapaBar extends React.Component {
     * Customize the appearance and location of the map marker.
     * Customize the callout in ../Components/MapCallout.js
     *************************************************************/
-
+    
     return (
       <MapView.Marker key={location.id}  onPress={() =>  NavigationActions.barDetalhado(location)} coordinate={{latitude: location.latitude, longitude: location.longitude}}>
         <MapViewCalloutBar location={location} onPress={this.calloutPress} />
@@ -140,7 +140,3 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(MapaBar)
-
-
-
-

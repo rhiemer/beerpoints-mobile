@@ -31,9 +31,9 @@ export default class HeaderListViewFindText extends React.Component {
 
   render () {
     return (
-      <View style={[{padding: 5, paddingTop: 5}, { backgroundColor: Colors.azulAns }]}>
+      <View style={[{padding: 2, paddingTop: 2}, { backgroundColor: Colors.azulAns }]}>
             <Kohana
-              style={[this.props.styles,styles.input,{ backgroundColor: '#f9f5ed' }]}
+              style={[styles.input,styles.inputPesquisa,this.props.styles]}
               label={this.props.label}
               iconClass={FontAwesomeIcon}
               iconName={'search'}

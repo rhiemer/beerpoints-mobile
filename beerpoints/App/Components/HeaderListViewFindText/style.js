@@ -3,6 +3,12 @@ import { ApplicationStyles } from '../../Themes/'
 
 
 export default StyleSheet.create({
-  ...ApplicationStyles.screen
+  ...ApplicationStyles.screen,
+  inputPesquisa: {   
+    
+    backgroundColor: '#f9f5ed',
+    
+       
+  }
  
 })
