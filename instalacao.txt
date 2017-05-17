@@ -1,0 +1,67 @@
+//instalar dependencias do node
+npm install -g react-native-cli
+npm install -g react-native-ignite
+npm install --save react-native-vector-icons
+npm install --save react-native-maps
+npm install --save react-native-i18n
+npm install --save react-native-config
+npm install @remobile/react-native-splashscreen --save
+npm install --save ramdasauce
+npm install --save ramda
+npm install --save reduxsauce
+npm install --save seamless-immutable
+npm install --save reactotron-react-native
+npm install --save reactotron-apisauce
+npm install --save reactotron-redux
+npm install --save reactotron-redux-saga
+npm install --save redux@^3
+npm install --save react-redux
+npm install --save reduxsauce
+npm install react-native-router-flux@3.38.0 --save
+npm install --save redux-saga
+npm install --save redux-logger
+npm install --save redux-persist
+npm install --save react-native-animatable
+npm install --save react-native-drawer
+npm install --save react-native-textinput-effects
+npm install --save apisauce
+npm install --save format-json
+npm install --save react-native-scrollable-tab-view
+
+//alterar arquivo
+//node_modules\jest-haste-map\build\crawlers\watchman.js
+//subistiuir child.startsWith(root); por:
+return child.toLowerCase().startsWith(root.toLowerCase());
+
+//alterar arquivo
+//build.grandle
+//subistiuir child.startsWith(root); por:
+return child.toLowerCase().startsWith(root.toLowerCase());
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.3.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    //incluir linha
+    buildDir = "C:/Temp/${rootProject.name}/${project.name}"
+    repositories {
+        mavenLocal()
+        jcenter()
+        maven {
+            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+            url "$rootDir/../node_modules/react-native/android"
+        }
+    }
+}
+
+
+

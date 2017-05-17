@@ -36,7 +36,7 @@ export default class EntidadeDetalhada extends React.Component {
         <ScrollView style={styles.container}>
           <View style={styles.componentLabelContainer}>
             <Text style={styles.sectionText}>{`${nome}`}</Text>
-            <Text style={styles.componentLabel}>{`${I18n.t('idEntidade')}:${id}`}</Text>
+            <Text style={styles.componentLabel}>{`${I18n.t('idEntidade')}:${id}`}</Text>            
           </View>         
           <RoundedButton onPress={NavigationActions.pop}>
             Voltar

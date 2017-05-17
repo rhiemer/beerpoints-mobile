@@ -37,7 +37,7 @@ public class MainApplication extends Application implements ReactApplication {
             new ReactNativeI18n(),
             new RNDeviceInfo(),
             new ReactNativeConfigPackage(),
-            new RCTSplashScreenPackage(MainActivity.activity)
+            new RCTSplashScreenPackage(MainActivity.activity,false)
       );
     }
   };
